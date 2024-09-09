@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-chinese-style-atmosphere-background-promotion-banner-image_144570.jpg");
+    background-size: cover;
+    background-position: center;
+    animation: animacion-imagenes 1.2s steps(1) infinite;
+    background-attachment: fixed;
+}
+
+
+
+h1{
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 0 50px rgb(255, 255, 255);
+    font-family: 'MeltedMoster';
+    color: #000000;
+    padding: auto;
+    transition: transform 0.3s ease;
+}
+
+.container1 {
+    width: 90%;
+    border: 2px solid #0044ff;
+    max-width: 1200px;
+    margin: 90px auto;
+    background-image: url("https://png.pngtree.com/background/20210709/original/pngtree-chinese-style-ancient-gossip-ink-poster-picture-image_960078.jpg");
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+
+
+
+
+.container2 {
+    width: 30%;
+    max-width: 1200px;
+    align-items: baseline;
+    margin: 90px auto;
+    background-color: rgba(223, 223, 223, 0.25);
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #0044ff;
+    border-radius: 20px;
+}
+
+
+
+
+
+.container_chismes {
+    max-width: 1200px;
+    margin: 80px auto; 
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+.container_2chimes{
+    width: 80%;
+    height: 800px;
+    position: relative;
+    display: block;
+    margin: 90px  auto 0;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+.seccion_pagina {
+    margin-bottom: 15px;
+}
+.seccion_pagina  label {
+    display: block;
+    margin-bottom: 5px;
+}
+.seccion_pagina  input, .seccion_pagina  select, .seccion_pagina  textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.seccion_pagina  button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.seccion_pagina  button:hover {
+    background-color: #0056b3;
+}
+.list-group {
+    margin-top: 20px;
+}
+.list-group-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+@media (max-width: 768px) {
+    .container2 {
+        margin-top: 80px;
+        width: 90%;
+        height: 90vh;
+        padding: 10px;
+    }
+}

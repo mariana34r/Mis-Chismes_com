@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MisChismes.com</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+
+
+
+    <section class="container1">
+        <h1>Mis chismes.com</h1>
+    </section>
+
+
+
+
+    <section class="container2">
+        <h1>Gestión de Chismes</h1>
+    
+        <div id="chisme-form">
+            <h2>Agregar/Editar Chisme</h2>
+            <form>
+                <fieldset class="seccion_pagina">
+                    <legend>Detalles del Chisme</legend>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" rows="4" required></textarea>
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <label for="categoria">Categoría:</label>
+                    <select id="categoria" required>
+                        <option value="Personal">Personal</option>
+                        <option value="Laboral">Laboral</option>
+                        <option value="Familiar">Familiar</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <label for="date">Fecha:</label>
+                    <input type="date" id="date" required>
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" required>
+                        <option value="Guardado">Guardado</option>
+                        <option value="Contado">Contado</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <label for="comentarios">Comentarios adicionales:</label>
+                    <textarea id="comentarios" rows="2"></textarea>
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <button type="submit" id="guardar-chisme">Guardar Chisme</button>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    
+
+
+
+
+    <section class="container2">
+        <div id="buscar-filtros">
+            <h2>Buscar y Filtrar Chismes</h2>
+            <form>
+                <fieldset class="seccion_pagina">
+                    <label for="buscar">Buscar:</label>
+                    <input type="text" id="buscar" placeholder="Buscar por descripción">
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <label for="filtrar-estado">Estado:</label>
+                    <select id="filtrar-estado">
+                        <option value="">Todos</option>
+                        <option value="Guardado">Guardado</option>
+                        <option value="Contado">Contado</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset class="seccion_pagina">
+                    <label for="filtrar-categoria">Categoría:</label>
+                    <select id="filtrar-categoria">
+                        <option value="">Todas</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Laboral">Laboral</option>
+                        <option value="Familiar">Familiar</option>
+                    </select>
+                </fieldset>
+            </form>
+        </div>
+    
+        <div id="chisme-lista">
+            <h2>Lista de Chismes</h2>
+            <div id="lista-container"></div>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+<script src="main.js"></script>
+</body>
+</html>
