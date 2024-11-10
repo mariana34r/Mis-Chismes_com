@@ -30,7 +30,7 @@ Esta pagina permitira a los usuarios contar sus chismes mas resientes.
 ### Captura de la Seccion Home 🔬
 ![Captura del Home](https://github.com/user-attachments/assets/21e66871-5f5e-4a9a-937d-7c8062398692)
 
-### Captura de la Seccion Registrar Vehiculos 💉
+### Captura de la Seccion Registrar chismes 💉
 ![Captura del Home](https://github.com/user-attachments/assets/36dded3b-a9df-4e89-97f5-d27b7d8105cf)
 
 
