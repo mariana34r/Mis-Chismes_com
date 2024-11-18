@@ -1,5 +1,6 @@
-let chismes = [];
-let id_para_eliminar = 1;
+let chismes = JSON.parse(localStorage.getItem('chismes')) || []; 
+let id_para_eliminar = chismes.length ? Math.max(...chismes.map(chisme => chisme.id)) + 1 : 1; 
+
 
 function guardarChisme(event) {
     event.preventDefault();
@@ -20,13 +21,15 @@ function guardarChisme(event) {
     };
 
     chismes.push(chisme);
+    localStorage.setItem('chismes', JSON.stringify(chismes)); 
     document.querySelector('#chisme-form form').reset();
     mostrarChismes();
 }
 
+
 function mostrarChismes() {
     const contenedor = document.getElementById('lista-container');
-    contenedor.innerHTML = '';
+    contenedor.innerHTML = ''; 
 
     const busqueda = document.getElementById('buscar').value.toLowerCase();
     const estadoFiltro = document.getElementById('filtrar-estado').value;
@@ -57,10 +60,13 @@ function mostrarChismes() {
     });
 }
 
+
 function eliminarChisme(id) {
     chismes = chismes.filter(chisme => chisme.id !== id);
+    localStorage.setItem('chismes', JSON.stringify(chismes)); 
     mostrarChismes();
 }
+
 
 function editarChisme(id) {
     const chisme = chismes.find(ch => ch.id === id);
@@ -71,16 +77,21 @@ function editarChisme(id) {
         document.getElementById('estado').value = chisme.estado;
         document.getElementById('comentarios').value = chisme.comentarios;
 
-        
+        // Eliminar el chisme para que no se duplique
         chismes = chismes.filter(ch => ch.id !== id);
+        localStorage.setItem('chismes', JSON.stringify(chismes)); 
         mostrarChismes();
     }
 }
+
 
 document.getElementById('guardar-chisme').addEventListener('click', guardarChisme);
 document.getElementById('buscar').addEventListener('input', mostrarChismes);
 document.getElementById('filtrar-estado').addEventListener('change', mostrarChismes);
 document.getElementById('filtrar-categoria').addEventListener('change', mostrarChismes);
+
+
+mostrarChismes();
 
 
 
